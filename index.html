@@ -9,6 +9,71 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Old-style product cards: 3 across on desktop, 2 on tablet, 1 on mobile */
+    #products .old-style-product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    #products .old-style-product-grid .product-card,
+    #products .old-style-product-grid .product-card:nth-child(4),
+    #products .old-style-product-grid .product-card:nth-child(5) {
+      grid-column: auto !important;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    #products .old-style-product-grid .product-image {
+      width: 100%;
+      height: 270px;
+      aspect-ratio: auto;
+      overflow: hidden;
+      border-radius: 0;
+      background: #fff8f7;
+    }
+
+    #products .old-style-product-grid .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #products .old-style-product-grid .product-content {
+      padding: 26px;
+    }
+
+    #products .old-style-product-grid .product-content h3 {
+      margin: 10px 0 8px;
+      font-size: 24px;
+    }
+
+    #products .old-style-product-grid .product-content p {
+      color: var(--muted);
+      min-height: 96px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1000px) {
+      #products .old-style-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      #products .old-style-product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #products .old-style-product-grid .product-image {
+        height: 240px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -129,7 +194,7 @@
       </p>
     </div>
 
-    <div class="products-grid">
+    <div class="old-style-product-grid">
 
       <!-- SQUARE PHOTO MAGNET -->
       <article class="product-card">
