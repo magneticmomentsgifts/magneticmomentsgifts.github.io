@@ -1097,3 +1097,464 @@ h1 span {
     animation: none !important;
   }
 }
+
+/* ==================================================
+   GRAND OPENING OFFER STRIP
+   ================================================== */
+
+.launch-strip {
+  background:
+    linear-gradient(
+      90deg,
+      #b33e6d,
+      #d85588,
+      #b94778
+    );
+
+  color: white;
+
+  box-shadow:
+    0 8px 25px rgba(161, 55, 101, 0.18);
+}
+
+.launch-strip-inner {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.launch-label {
+  background: white;
+  color: #a93461;
+
+  padding: 5px 10px;
+  border-radius: 999px;
+
+  font-size: 11px;
+  letter-spacing: .08em;
+  font-weight: 800;
+}
+
+.launch-highlight {
+  font-weight: 800;
+}
+
+.launch-strip a {
+  color: white;
+
+  font-weight: 800;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.7);
+}
+
+.launch-strip a:hover {
+  opacity: .8;
+}
+
+
+/* ==================================================
+   PRICING SECTION
+   ================================================== */
+
+.pricing-section {
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 201, 224, .32),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 90% 25%,
+      rgba(190, 255, 232, .30),
+      transparent 30%
+    ),
+
+    #fffaf8;
+}
+
+
+.pricing-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+
+.price-card {
+  position: relative;
+
+  background:
+    rgba(255,255,255,.82);
+
+  backdrop-filter: blur(15px);
+
+  border:
+    1px solid rgba(255,255,255,.9);
+
+  border-radius: 26px;
+
+  padding: 28px 24px;
+
+  box-shadow:
+    0 16px 42px rgba(95, 55, 78, .09);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+
+.price-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 22px 55px rgba(95, 55, 78, .16);
+}
+
+
+/* Featured 2x2 card */
+
+.featured-price {
+  border:
+    2px solid rgba(190, 62, 111, .45);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.98),
+      rgba(255,239,246,.92)
+    );
+}
+
+
+.price-top h3 {
+  font-size: 22px;
+
+  margin:
+    14px 0 16px;
+}
+
+
+.price-badge {
+  display: inline-block;
+
+  padding:
+    6px 10px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b33e6d,
+      #e15f92
+    );
+
+  color: white;
+
+  font-size: 10px;
+
+  letter-spacing:
+    .08em;
+
+  font-weight: 800;
+}
+
+
+.soft-badge {
+  background:
+    #f7e5ec;
+
+  color:
+    #a53862;
+}
+
+
+.single-price {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+
+  margin-bottom:
+    22px;
+}
+
+
+.single-price strong {
+  font-family:
+    "Playfair Display", serif;
+
+  color:
+    #a93461;
+
+  font-size:
+    38px;
+
+  line-height: 1;
+}
+
+
+.single-price span {
+  color:
+    var(--muted);
+
+  font-size:
+    13px;
+}
+
+
+.bulk-prices {
+  border-top:
+    1px solid var(--line);
+
+  margin-top:
+    18px;
+
+  padding-top:
+    12px;
+}
+
+
+.bulk-prices div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding:
+    11px 0;
+
+  border-bottom:
+    1px solid rgba(110,80,95,.08);
+
+  font-size:
+    14px;
+}
+
+
+.bulk-prices span {
+  color:
+    var(--muted);
+}
+
+
+.bulk-prices strong {
+  font-size:
+    15px;
+}
+
+
+.best-tier {
+  margin-top:
+    5px;
+
+  padding:
+    11px 9px !important;
+
+  border-radius:
+    12px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,218,232,.7),
+      rgba(232,255,246,.65)
+    );
+
+  border-bottom:
+    none !important;
+}
+
+
+.best-tier span,
+.best-tier strong {
+  color:
+    #952f58;
+}
+
+
+.price-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top:
+    22px;
+
+  min-height:
+    46px;
+
+  width:
+    100%;
+
+  border-radius:
+    999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ad3b67,
+      #d95386
+    );
+
+  color:
+    white;
+
+  font-weight:
+    700;
+
+  transition:
+    transform .2s ease;
+}
+
+
+.price-button:hover {
+  transform:
+    translateY(-2px);
+}
+
+
+/* Pricing disclaimer */
+
+.pricing-note {
+  max-width:
+    800px;
+
+  margin:
+    38px auto 0;
+
+  display:
+    flex;
+
+  gap:
+    13px;
+
+  align-items:
+    center;
+
+  background:
+    rgba(255,255,255,.72);
+
+  border:
+    1px solid rgba(255,255,255,.95);
+
+  border-radius:
+    18px;
+
+  padding:
+    17px 22px;
+
+  box-shadow:
+    0 10px 30px rgba(80,50,70,.06);
+}
+
+
+.pricing-note span {
+  font-size:
+    26px;
+}
+
+
+.pricing-note p {
+  margin: 0;
+
+  color:
+    var(--muted);
+
+  font-size:
+    14px;
+}
+
+
+/* ==================================================
+   RESPONSIVE PRICING
+   ================================================== */
+
+@media (max-width: 1050px) {
+
+  .pricing-grid {
+    grid-template-columns:
+      repeat(2, minmax(0,1fr));
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .launch-strip-inner {
+    padding:
+      9px 0;
+
+    gap:
+      7px;
+
+    text-align:
+      center;
+
+    font-size:
+      12px;
+  }
+
+
+  .launch-dot {
+    display:
+      none;
+  }
+
+
+  .pricing-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .price-card {
+    padding:
+      25px 22px;
+  }
+
+
+  .pricing-note {
+    align-items:
+      flex-start;
+  }
+
+}
+
+/* Move baby card slightly toward center */
+
+@media (min-width: 1001px) {
+  .baby-card {
+    left: 60px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .baby-card {
+    left: 45px;
+  }
+}
+
+@media (max-width: 700px) {
+  .baby-card {
+    left: 30px;
+  }
+}
