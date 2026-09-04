@@ -1855,3 +1855,223 @@ h1 span {
     animation: none !important;
   }
 }
+
+/* ==================================================
+   STRONG GRAND OPENING GLITTER / BLINK EFFECT
+   ================================================== */
+
+.launch-strip {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #9f2f5f,
+      #d94f87,
+      #ff7bac,
+      #c23c75,
+      #9f2f5f
+    );
+
+  background-size: 300% 100%;
+
+  animation:
+    bannerColorMove 3s linear infinite,
+    bannerGlow 1.6s ease-in-out infinite alternate;
+
+  box-shadow:
+    0 0 14px rgba(255, 84, 155, .45),
+    0 0 28px rgba(255, 128, 185, .20);
+}
+
+
+/* moving bright shine */
+.launch-strip::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -35%;
+
+  width: 22%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.25),
+    rgba(255,255,255,.95),
+    rgba(255,255,255,.25),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  animation: shineSweep 2.4s linear infinite;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* glitter sparkles */
+.launch-strip::after {
+  content: "✦  ✧  ✦  ✧  ✦  ✧";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 17px;
+
+  letter-spacing: 50px;
+
+  color: rgba(255,255,255,.75);
+
+  animation: glitterBlink 1.2s ease-in-out infinite;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.launch-strip-inner {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* Grand Opening pill */
+.launch-label {
+  animation:
+    openingPulse 1.2s ease-in-out infinite,
+    openingBlink 2.2s ease-in-out infinite;
+
+  box-shadow:
+    0 0 12px rgba(255,255,255,.55);
+}
+
+
+/* Prices glow */
+.launch-highlight {
+  animation: priceGlow 1.4s ease-in-out infinite alternate;
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,.35),
+    0 0 16px rgba(255,255,255,.22);
+}
+
+
+/* See all offers */
+.launch-strip a {
+  animation: offerBlink 1.6s ease-in-out infinite;
+}
+
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes bannerColorMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+
+@keyframes bannerGlow {
+  from {
+    box-shadow:
+      0 0 10px rgba(255,84,155,.25);
+  }
+
+  to {
+    box-shadow:
+      0 0 22px rgba(255,84,155,.65),
+      0 0 38px rgba(255,130,190,.25);
+  }
+}
+
+
+@keyframes shineSweep {
+  0% {
+    left: -35%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+
+@keyframes glitterBlink {
+  0%,
+  100% {
+    opacity: .15;
+  }
+
+  50% {
+    opacity: .9;
+  }
+}
+
+
+@keyframes openingPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+
+@keyframes openingBlink {
+  0%,
+  100% {
+    background: white;
+    color: #a93461;
+  }
+
+  50% {
+    background: #fff3b0;
+    color: #9f2f5f;
+  }
+}
+
+
+@keyframes priceGlow {
+  from {
+    color: white;
+  }
+
+  to {
+    color: #fff3b0;
+  }
+}
+
+
+@keyframes offerBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .55;
+  }
+}
