@@ -658,3 +658,101 @@ h1 span {
 .product-card:hover .product-image img {
   transform: scale(1.035);
 }
+
+/* ===== Hero real image cards ===== */
+
+.hero-visual {
+  min-height: 560px;
+  position: relative;
+  overflow: visible;
+}
+
+.hero-card {
+  position: absolute;
+  width: 240px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(87, 48, 73, 0.18);
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(87, 48, 73, 0.25);
+}
+
+.hero-card img {
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+}
+
+.card-one {
+  top: 30px;
+  left: 25px;
+  transform: rotate(-8deg);
+  z-index: 1;
+}
+
+.card-two {
+  top: 150px;
+  right: 10px;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.card-three {
+  bottom: 0;
+  left: 120px;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+/* ===== remove old star look ===== */
+.sparkle,
+.s1,
+.s2,
+.mock-photo {
+  display: none !important;
+}
+
+/* ===== floating emojis ===== */
+.float-emoji {
+  position: absolute;
+  font-size: 34px;
+  line-height: 1;
+  animation: floaty 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.e1 { top: 18px; right: 65px; animation-delay: 0s; }
+.e2 { top: 95px; right: 0; animation-delay: 1s; }
+.e3 { bottom: 115px; left: 5px; animation-delay: 2s; }
+.e4 { top: 230px; left: -8px; animation-delay: 1.5s; }
+.e5 { bottom: 25px; right: 55px; animation-delay: 2.5s; }
+
+/* ===== floating bubbles ===== */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.65);
+  backdrop-filter: blur(8px);
+  animation: floaty 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.b1 { width: 28px; height: 28px; top: 70px; left: 205px; }
+.b2 { width: 18px; height: 18px; top: 190px; right: 100px; animation-delay: 1s; }
+.b3 { width: 22px; height: 22px; bottom: 70px; right: 5px; animation-delay: 2s; }
+.b4 { width: 14px; height: 14px; bottom: 200px; left: 75px; animation-delay: 3s; }
+
+@keyframes floaty {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
