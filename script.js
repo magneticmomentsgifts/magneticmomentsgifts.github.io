@@ -15,7 +15,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const cards = document.querySelectorAll('.draggable-card');
 
 let activeCard = null;
 let offsetX = 0;

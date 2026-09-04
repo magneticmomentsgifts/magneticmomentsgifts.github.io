@@ -756,3 +756,344 @@ h1 span {
   50%  { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
+
+/* ==================================================
+   STATIC MEMORY COLLAGE
+   ================================================== */
+
+.hero-visual.memory-collage {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* Individual cards */
+.memory-card {
+  position: absolute;
+  width: 190px !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 18px 22px rgba(76, 44, 64, 0.14));
+
+  transition: none !important;
+}
+
+/* Baby - back left */
+.baby-card {
+  top: 18px;
+  left: 32px;
+  transform: rotate(-8deg);
+  z-index: 1;
+}
+
+/* Couple - back right */
+.couple-card {
+  top: 118px;
+  right: 12px;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+/* Family - front center */
+.family-card {
+  bottom: 4px;
+  left: 148px;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+
+/* ==================================================
+   FLOATING LOVE EMOJIS
+   ================================================== */
+
+.love-float {
+  position: absolute;
+  font-size: 28px;
+  z-index: 5;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.love-1 {
+  top: 35px;
+  right: 72px;
+  animation: loveMoveOne 8s ease-in-out infinite;
+}
+
+.love-2 {
+  top: 205px;
+  left: 0;
+  animation: loveMoveTwo 10s ease-in-out infinite;
+}
+
+.love-3 {
+  bottom: 38px;
+  right: 25px;
+  animation: loveMoveThree 9s ease-in-out infinite;
+}
+
+.love-4 {
+  bottom: 130px;
+  left: 50px;
+  font-size: 24px;
+  animation: loveMoveFour 11s ease-in-out infinite;
+}
+
+
+@keyframes loveMoveOne {
+  0% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+
+  35% {
+    transform: translate(-20px, 14px) rotate(5deg);
+  }
+
+  70% {
+    transform: translate(12px, 30px) rotate(-3deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+}
+
+@keyframes loveMoveTwo {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  40% {
+    transform: translate(26px, -22px);
+  }
+
+  75% {
+    transform: translate(42px, 8px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes loveMoveThree {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-32px, -25px) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes loveMoveFour {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  45% {
+    transform: translate(-15px, -28px);
+  }
+
+  75% {
+    transform: translate(18px, -15px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+/* ==================================================
+   SOFT FLOATING BUBBLES
+   ================================================== */
+
+.love-bubble {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255,255,255,.9),
+      rgba(255,190,220,.22) 45%,
+      rgba(205,230,255,.15)
+    );
+
+  border: 1px solid rgba(255,255,255,.75);
+
+  box-shadow:
+    inset 0 0 8px rgba(255,255,255,.6),
+    0 5px 16px rgba(190,120,165,.12);
+
+  will-change: transform;
+}
+
+.bubble-1 {
+  width: 24px;
+  height: 24px;
+  top: 95px;
+  left: 225px;
+
+  animation: bubbleMove 9s ease-in-out infinite;
+}
+
+.bubble-2 {
+  width: 15px;
+  height: 15px;
+  top: 255px;
+  right: 82px;
+
+  animation: bubbleMove 12s ease-in-out infinite reverse;
+}
+
+.bubble-3 {
+  width: 20px;
+  height: 20px;
+  bottom: 75px;
+  left: 94px;
+
+  animation: bubbleMove 10s ease-in-out infinite;
+}
+
+@keyframes bubbleMove {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(18px, -38px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 1000px) {
+
+  .hero-visual.memory-collage {
+    max-width: 470px;
+    height: 440px;
+  }
+
+  .memory-card {
+    width: 165px !important;
+  }
+
+  .baby-card {
+    top: 20px;
+    left: 28px;
+  }
+
+  .couple-card {
+    top: 105px;
+    right: 10px;
+  }
+
+  .family-card {
+    left: 125px;
+    bottom: 5px;
+  }
+
+  .love-float {
+    font-size: 24px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+  .hero-visual.memory-collage {
+    width: 100%;
+    max-width: 360px;
+    height: 365px;
+    margin: 25px auto 0;
+  }
+
+  .memory-card {
+    width: 135px !important;
+  }
+
+  .baby-card {
+    top: 6px;
+    left: 18px;
+    transform: rotate(-7deg);
+  }
+
+  .couple-card {
+    top: 85px;
+    right: 6px;
+    transform: rotate(6deg);
+  }
+
+  .family-card {
+    left: 92px;
+    bottom: 2px;
+    transform: rotate(-2deg);
+  }
+
+  .love-float {
+    font-size: 21px;
+  }
+
+  .love-1 {
+    top: 15px;
+    right: 42px;
+  }
+
+  .love-2 {
+    top: 180px;
+    left: 2px;
+  }
+
+  .love-3 {
+    bottom: 15px;
+    right: 16px;
+  }
+
+  .love-4 {
+    bottom: 85px;
+    left: 22px;
+  }
+
+  .bubble-1 {
+    left: 165px;
+  }
+}
+
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  .love-float,
+  .love-bubble {
+    animation: none !important;
+  }
+}
