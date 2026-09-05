@@ -2075,3 +2075,87 @@ h1 span {
     opacity: .55;
   }
 }
+
+
+/* ==================================================
+   PLAYFUL GEN-Z HERO HEADLINE
+   ================================================== */
+
+.hero h1 {
+  font-family: "Lilita One", sans-serif;
+
+  font-size: clamp(52px, 6.5vw, 88px);
+  line-height: 0.98;
+
+  letter-spacing: 0.01em;
+
+  color: #35152a;
+
+  text-shadow:
+    0 3px 0 rgba(255,255,255,.75),
+    0 9px 24px rgba(160, 68, 115, .10);
+}
+
+
+/* "Keep them forever." */
+.hero h1 span {
+  display: inline-block;
+
+  font-family: "Leckerli One", cursive;
+
+  font-size: 0.88em;
+  font-weight: 400;
+
+  margin-top: 10px;
+
+  color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #c73e78 0%,
+    #ee5c98 35%,
+    #a55fd5 70%,
+    #6c7ee8 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  text-shadow: none;
+
+  filter:
+    drop-shadow(0 5px 10px rgba(214, 76, 137, .15));
+}
+
+
+/* Slight playful hover on desktop */
+@media (hover: hover) {
+  .hero h1 span {
+    transition:
+      transform .3s ease,
+      filter .3s ease;
+  }
+
+  .hero h1 span:hover {
+    transform: rotate(-1deg) scale(1.02);
+
+    filter:
+      drop-shadow(0 8px 14px rgba(214, 76, 137, .25));
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  .hero h1 {
+    font-size: clamp(46px, 13vw, 67px);
+    line-height: 1;
+  }
+
+  .hero h1 span {
+    font-size: .82em;
+    margin-top: 8px;
+  }
+
+}
